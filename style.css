@@ -1,13 +1,13 @@
 :root {
-  --mist: #f1f3fd;
-  --periwinkle: #cfd6f7;
-  --lavender: #e2dbf8;
-  --violet: #5b4fc4;
-  --ink: #272b4d;
-  --muted: #5c6085;
+  --mist: #f6f7fe;
+  --periwinkle: #d4defa;
+  --lavender: #e8e0fa;
+  --violet: #6a5fc9;
+  --ink: #2b2e50;
+  --muted: #5e6288;
   --white: #ffffff;
-  --serif: "Newsreader", Georgia, serif;
-  --sans: "DM Sans", system-ui, sans-serif;
+  --serif: "Roboto", system-ui, sans-serif;
+  --sans: "Roboto", system-ui, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -15,8 +15,8 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: var(--sans);
-  font-size: 1.0625rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.7;
   color: var(--ink);
   background: var(--mist);
 }
@@ -29,7 +29,7 @@ a { color: var(--violet); }
   flex-wrap: wrap; gap: .75rem;
   max-width: 68rem; margin: 0 auto; padding: 1.25rem 1.5rem;
 }
-.logo { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.logo { font-size: 1.15rem; font-weight: 700; color: var(--ink); text-decoration: none; }
 .site-header nav { display: flex; gap: 1.5rem; }
 .site-header nav a { color: var(--muted); text-decoration: none; font-weight: 500; }
 .site-header nav a:hover { color: var(--violet); }
@@ -42,21 +42,24 @@ main { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
   padding: 3.5rem 0 4.5rem;
 }
 .hero h1 {
-  font-family: var(--serif); font-weight: 600;
-  font-size: clamp(2.3rem, 5vw, 3.6rem); line-height: 1.08; letter-spacing: -0.02em;
-  margin: 0 0 1.25rem; max-width: 16ch;
+  font-weight: 700;
+  font-size: clamp(2.1rem, 4.6vw, 3.2rem); line-height: 1.1; letter-spacing: -0.015em;
+  margin: 0 0 .75rem; max-width: 14ch;
 }
-.hero p { color: var(--muted); max-width: 46ch; margin: 0 0 2rem; }
+.hero p { color: var(--muted); max-width: 46ch; margin: 0 0 1.25rem; }
+.hero .role-line { color: var(--ink); font-size: 1.3rem; font-weight: 500; line-height: 1.4; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
 .btn {
-  display: inline-block; background: var(--violet); color: var(--white);
-  padding: .8rem 1.6rem; border-radius: .6rem; font-weight: 700; text-decoration: none;
+  display: inline-block; background: var(--lavender); color: var(--ink); border: 2px solid var(--violet);
+  padding: .75rem 1.5rem; border-radius: .6rem; font-weight: 700; text-decoration: none;
   transition: background .2s;
 }
-.btn:hover { background: var(--ink); }
+.btn:hover { background: var(--violet); color: var(--white); }
+.btn-alt { background: transparent; }
 
 .hero-chart {
   margin: 0; padding: 1.5rem; border-radius: 1.25rem;
-  background: linear-gradient(160deg, var(--periwinkle), var(--lavender));
+  background: linear-gradient(160deg, #d4defa, #eadff8 60%, #fbe3ef);
 }
 .hero-chart svg { width: 100%; height: auto; display: block; }
 .hero-chart figcaption { margin-top: .75rem; font-size: .9rem; color: var(--muted); }
@@ -67,7 +70,7 @@ main { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
 
 /* Sections */
 .section { padding: 3.5rem 0; border-top: 1px solid var(--periwinkle); }
-.section h2 { font-family: var(--serif); font-size: 2rem; font-weight: 600; margin: 0 0 .5rem; letter-spacing: -0.01em; }
+.section h2 { font-size: 1.75rem; font-weight: 700; margin: 0 0 .5rem; letter-spacing: -0.01em; }
 .lede { color: var(--muted); margin: 0 0 2rem; }
 
 /* Work ledger */
@@ -76,10 +79,10 @@ main { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
   display: grid; grid-template-columns: 1fr 9rem 11rem; gap: 1.5rem; align-items: baseline;
   padding: 1.5rem 0; border-bottom: 1px solid var(--periwinkle);
 }
-.ledger h3 { font-family: var(--serif); font-size: 1.3rem; margin: 0 0 .25rem; }
+.ledger h3 { font-size: 1.15rem; font-weight: 500; margin: 0 0 .25rem; }
 .ledger p { margin: 0; color: var(--muted); max-width: 52ch; }
 .role { color: var(--muted); }
-.figure { font-family: var(--serif); font-size: 1.35rem; color: var(--violet); text-align: right; }
+.figure { font-size: 1.15rem; font-weight: 700; color: var(--violet); text-align: right; }
 
 /* Skills */
 .two-col { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; margin-top: 1.5rem; }
